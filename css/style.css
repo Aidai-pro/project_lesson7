@@ -1,0 +1,293 @@
+:root {
+    --blue: #1A1AFF;
+    --accent: #00F5D4;
+    --bg-dark: #0B1026;
+    --bg-light: #131B3A;
+    --text-light: #f5f5f5;
+    --transition: 0.3s ease;
+    --radius: 12px;
+    --shadow: 0 0 20px rgba(0, 245, 212, 0.25);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+/* ====== HEADER ====== */
+
+.header {
+    height: 90px;
+    background: var(--bg-light);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: var(--shadow);
+}
+
+.inner_header {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotype {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.logotype:hover {
+    color: var(--blue);
+    transform: scale(1.1);
+}
+
+/* ====== МЕНЮ ====== */
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu_link a {
+    color: var(--text-light);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.menu_link a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent);
+}
+
+/* ====== ОСНОВНОЙ КОНТЕНТ ====== */
+
+.main_block {
+    padding: 120px 10%;
+    background: var(--bg-dark);
+    text-align: center;
+}
+
+.main_block h1 {
+    font-size: 42px;
+    color: var(--accent);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main_block p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* ====== КНОПКИ ====== */
+
+.btn-color {
+    background: var(--accent);
+    color: var(--bg-dark);
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-color:hover {
+    background: var(--blue);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ====== СЛАЙДЕР ====== */
+
+.slider_block {
+    padding: 100px 0;
+    background: var(--bg-light);
+}
+
+.slider {
+    position: relative;
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid var(--accent);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.slide {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active_slide {
+    display: block;
+}
+
+.slide_card h3 {
+    color: var(--accent);
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.slide_card p {
+    color: #ccc;
+    margin: 10px 0;
+}
+
+/* ====== ВИДЕО-БЛОК ====== */
+
+.block_video {
+    padding: 100px 0;
+    background: var(--bg-dark);
+}
+
+.inner_block_video {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.inner_block_video iframe {
+    border: 2px solid var(--accent);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* ====== МОДАЛЬНОЕ ОКНО ====== */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_dialog {
+    width: 90%;
+    max-width: 500px;
+    background: var(--bg-light);
+    border-radius: var(--radius);
+    border: 1px solid var(--accent);
+    box-shadow: var(--shadow);
+    padding: 30px;
+}
+
+.modal_close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    color: #ff3b3b;
+    cursor: pointer;
+}
+
+.modal_title {
+    text-align: center;
+    font-size: 22px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.modal_input, .btn_min {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: var(--radius);
+    border: 1px solid var(--accent);
+    background: #1b1b3b;
+    color: white;
+}
+
+/* ====== FOOTER ====== */
+
+.footer {
+    background: var(--bg-light);
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 80px;
+    box-shadow: var(--shadow);
+}
+
+.footer h2 {
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* ====== АНИМАЦИЯ ====== */
+
+.botlle {
+    background: var(--bg-dark);
+    padding: 100px 0;
+}
+
+.bottle_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bowl {
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    border: 6px solid var(--accent);
+    animation: spin 6s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(20deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-20deg); }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .main_block h1 {
+        font-size: 32px;
+    }
+
+    .slide_card h3 {
+        font-size: 18px;
+    }
+}
